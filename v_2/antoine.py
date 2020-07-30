@@ -29,9 +29,8 @@ def get_psat(s, T):
         B = float(antoine['B'][3])
         C = float(antoine['C'][3])
 
-    def psat(T):
-        return (101.325 / 760) * np.power(10, A - B / (T - 273.15 + C))  # in kPa
-    return psat(T)
+        psat = (101.325 / 760) * np.power(10, A - B / (T - 273.15 + C))  # in kPa
+    return psat
 
 
 
